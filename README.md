@@ -8,10 +8,18 @@ This project is a data analytics platform that utilizes **Streamlit** for visual
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup and Installation](#setup-and-installation)
-- [How to Run the Project](#how-to-run-the-project)
-- [Testing and Test Coverage](#testing-and-test-coverage)
-- [Querying Data from PostgreSQL](#querying-data-from-postgresql)
-- [Project Structure](#project-structure)
+- [Run the project](#2-run-the-project)
+- [Testing and Test Coverage](#3-test-coverage-report)
+- [Check the data from PostgreSQL](#4-check-the-data-from-postgresql)
+- [Streamlit report](#5-streamlit-report)
+- [Assignment tasks](#assignment-tasks)
+- [Data Ingestion](#data-ingestion)
+- [Data Transformation](#data-transformation)
+- [Data Loading](#data-loading)
+- [Optimization and Analysis](#optimization-and-analysis)
+- [Generate a Performance Report (Streamlit App)](#generate-a-performance-report--streamlit-app-)
+- [Finally](#finally)
+
 
 ## Project Overview
 

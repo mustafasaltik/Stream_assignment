@@ -1,0 +1,8 @@
+pandas
+sqlalchemy
+psycopg2
+cryptography
+coverage
+streamlit
+matplotlib
+plotly

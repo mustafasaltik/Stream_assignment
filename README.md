@@ -41,7 +41,7 @@ The project ingests data from multiple files, processes them, and stores the res
 
 To run the project, make sure you have the following installed:
 
-- Python 3.8+
+- Python 3.10
 - Docker & Docker Compose (for PostgreSQL setup)
 
 Python dependencies are listed in `requirements.txt`.

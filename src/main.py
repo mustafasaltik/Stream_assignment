@@ -135,7 +135,7 @@ def convert_date_format(transactions_df):
     # Check if the 'Date (UTC)' column exists
     if 'Date (UTC)' in transactions_df.columns:
         # Convert the 'Date (UTC)' column to the desired format
-        transactions_df['Date (UTC)'] = pd.to_datetime(transactions_df['Date (UTC)'], format='%m/%d/%y %H:%M')
+        transactions_df['Date (UTC)'] = pd.to_datetime(transactions_df['Date (UTC)'], format="mixed")
         logging.info("Date format converted to 'YYYY-MM-DD HH:MI:00'")
     else:
         logging.warning("Date (UTC) column not found in transactions data.")

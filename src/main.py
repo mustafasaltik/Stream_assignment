@@ -267,7 +267,9 @@ def save_to_postgres(engine, df, table_name, primary_key=None):
         with engine.connect() as conn:
             alter_query = f'ALTER TABLE {table_name} ADD PRIMARY KEY ({pk_columns});'
             conn.execute(text(alter_query))
-            logging.info(f"Primary key '{pk_columns}' added to table '{table_name}'.")
+            conn.commit()
+            logging.info(f"Primary key '{pk_columns}' added to table '{table_name}'.\n"
+                         f"Alter_query: '{alter_query}'")
 
 
 def get_postgres_engine():

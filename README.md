@@ -337,3 +337,29 @@ Don't forget to release all the resources by stopping streamlit application and 
 
 - Go to your terminal which you run the ```run_project.sh``` file and press _ctrl + C_ . This will kill the process and streamlit app will stop. It will also allow ```run_project.sh``` to remove docker containers which is the last step before quit.
 - Done!
+
+### Next Steps
+
+#### **How to Make it Production Ready**
+
+- CI/CD
+  * Automate Unit Tests with GitHub Actions 
+    * Use GitHub Actions to run unit tests and generate test coverage reports on every code push.
+- Deployment to Google Cloud Platform (GCP)
+    * Create a GKE Cluster on GCP. 
+    * Set up Google Cloud credentials in GitHub Actions to deploy to GKE.
+- Set Up Monitoring and Alerting
+   * Use Datadog to monitor the system
+   * Collect logs from GCP to Datadog following [Datadog documentation](https://docs.datadoghq.com/logs/guide/collect-google-cloud-logs-with-push/)
+   * Configure monitors and alerts via [Datadog to Slack notifications](https://docs.datadoghq.com/integrations/slack/?tab=datadogforslack) for critical alerts.
+- Separate staging and transformation layer 
+- Data modelling (fact and dimension)
+- Incremental logic should be applied for both extraction and transformation layer (to not process entire data on every run)
+- If data is large, I prefer to run transformations with SQL or Spark instead of running pandas in memory. 
+- I would prefer a reporting tool instead of streamlit app, prepare a data model in it (like LookML for Looker). 
+- So the main pillars of the pipeline should be like this
+  - Ingest data from source system incremental and store into the staging area 
+  - Process data with SQL or Spark 
+  - Store modelled data in BigQuery 
+  - Connect Looker to the BigQuery for reporting, dashboarding or Ad-hoc data analyses 
+  - Prepare a data catalog to spread knowledge for entire company especially who need to use prepared data

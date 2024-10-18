@@ -354,6 +354,8 @@ Don't forget to release all the resources by stopping streamlit application and 
    * Configure monitors and alerts via [Datadog to Slack notifications](https://docs.datadoghq.com/integrations/slack/?tab=datadogforslack) for critical alerts.
 - Separate staging and transformation layer 
 - Data modelling (fact and dimension)
+- Extend data quality checks for modelled data
+- Exception handling can be improved with using more detailed error messages using custom exceptions
 - Incremental logic should be applied for both extraction and transformation layer (to not process entire data on every run)
 - If data is large, I prefer to run transformations with SQL or Spark instead of running pandas in memory. 
 - I would prefer a reporting tool instead of streamlit app, prepare a data model in it (like LookML for Looker). 
@@ -363,3 +365,6 @@ Don't forget to release all the resources by stopping streamlit application and 
   - Store modelled data in BigQuery 
   - Connect Looker to the BigQuery for reporting, dashboarding or Ad-hoc data analyses 
   - Prepare a data catalog to spread knowledge for entire company especially who need to use prepared data
+  - Prepare a Data Quality Monitoring for data team. For example:
+
+<img src="assets/data_quality_report.png" width="700" height="400" alt="Image description">

@@ -1,4 +1,3 @@
-# Assignment - Senior Data Engineer
 
 This project is a data analytics platform that utilizes **Streamlit** for visualizations and **PostgreSQL** as the database backend. It covers the analysis of transaction data, including average user transactions, monthly revenue growth, and product sales.
 
